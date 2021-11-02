@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="cocktailApp" customModuleProvider="target">
+            <connections>
+                <outlet property="categoryPicker" destination="rAN-k7-3Hv" id="K7s-QL-EHl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CocktailApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4l-J2-dSA">
+                    <rect key="frame" x="8" y="60" width="398" height="36"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                    <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cocktail_glass" translatesAutoresizingMaskIntoConstraints="NO" id="LlO-vi-EVU">
+                    <rect key="frame" x="131.5" y="104" width="151" height="147"/>
+                    <color key="backgroundColor" red="0.13913026449999999" green="0.013717219229999999" blue="0.070706330240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.13913026449999999" green="0.013717219229999999" blue="0.070706330240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="147" id="t2n-eE-w97"/>
+                        <constraint firstAttribute="width" constant="151" id="wRP-91-a1j"/>
+                    </constraints>
+                </imageView>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAN-k7-3Hv">
+                    <rect key="frame" x="0.0" y="299" width="414" height="216"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by category:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nd-sU-Z5q">
+                    <rect key="frame" x="8" y="267" width="398" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEm-hu-m0h">
+                    <rect key="frame" x="177" y="827" width="60" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="IP7-gz-v2q"/>
+                        <constraint firstAttribute="height" constant="35" id="gic-dL-PDb"/>
+                    </constraints>
+                    <state key="normal" title="Search">
+                        <color key="titleColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="searchPressed:" destination="-1" eventType="touchUpInside" id="cDz-8E-AnE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.13913026449999999" green="0.013717219229999999" blue="0.070706330240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6Nd-sU-Z5q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="1jj-p3-JkU"/>
+                <constraint firstItem="EEm-hu-m0h" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="3v6-ij-Qm0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="z4l-J2-dSA" secondAttribute="trailing" constant="8" id="BAd-Vh-q9d"/>
+                <constraint firstItem="6Nd-sU-Z5q" firstAttribute="top" secondItem="LlO-vi-EVU" secondAttribute="bottom" constant="16" id="KHH-8i-0iS"/>
+                <constraint firstItem="z4l-J2-dSA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="Oy9-TN-sSr"/>
+                <constraint firstItem="rAN-k7-3Hv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="SIg-1Y-W2R"/>
+                <constraint firstItem="rAN-k7-3Hv" firstAttribute="top" secondItem="6Nd-sU-Z5q" secondAttribute="bottom" constant="8" id="VRw-u0-b0m"/>
+                <constraint firstItem="LlO-vi-EVU" firstAttribute="top" secondItem="z4l-J2-dSA" secondAttribute="bottom" constant="8" id="WpE-1T-bUL"/>
+                <constraint firstItem="LlO-vi-EVU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XkF-2Y-cmW"/>
+                <constraint firstItem="EEm-hu-m0h" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YJI-Al-zCb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6Nd-sU-Z5q" secondAttribute="trailing" constant="8" id="dRX-YN-UPl"/>
+                <constraint firstItem="rAN-k7-3Hv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oU4-3t-WNA"/>
+                <constraint firstItem="z4l-J2-dSA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="orB-Vt-oDi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cocktail_glass" width="800" height="800"/>
+    </resources>
+</document>
